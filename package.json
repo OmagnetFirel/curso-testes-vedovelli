@@ -1,0 +1,25 @@
+{
+  "name": "repotestes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmagnetFirel/curso-testes-vedovelli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmagnetFirel/curso-testes-vedovelli/issues"
+  },
+  "homepage": "https://github.com/OmagnetFirel/curso-testes-vedovelli#readme",
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1"
+  }
+}
