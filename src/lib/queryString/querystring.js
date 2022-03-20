@@ -1,7 +1,10 @@
-module.exports.querystring = (obj) => {
-    const entries = Object.entries(obj).map(item => {
-        return `${item[0]}=${item[1]}`;
-    })
-
-    return (entries.join('&'));
+// * posso passar uma função para o map
+const keyValueToString = ([key, value]) => {
+    if (typeof value === 'object' && !Array.isArray(value)) throw new Error('Objects are not allowed as values');
+    return `${key}=${value}`
 }
+
+// * formas enxutas de retornar arrow functions !dahora
+module.exports.querystring = (obj) => Object.entries(obj)
+    .map(keyValueToString)
+    .join('&');
