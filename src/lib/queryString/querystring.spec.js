@@ -1,5 +1,6 @@
 const {
-    querystring
+    querystring,
+    parse
 } = require('./querystring');
 
 describe('Object to query string', () => {
@@ -37,4 +38,15 @@ describe('Object to query string', () => {
         }
         expect(() => querystring(obj)).toThrowError();
     })
+});
+
+describe('QueryString to object', () => {
+    it('Should Convert a querystring to object', () => {
+        const querystring = "name=Victor&profession=Software Developer";
+        expect(parse(querystring)).toEqual({
+            name: 'Victor',
+            profession: 'Software Developer'
+        });
+    });
+
 });
